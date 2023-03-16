@@ -19,20 +19,20 @@
             decInput = Convert.ToDecimal(strInput)
             If decInput < 0 Then
                 MessageBox.Show(strNegativeMsgBox, strTitleMsgBox)
-            Else
-                lblConversion.Visible = True
             End If
         Else
             MessageBox.Show(strPositiveMsgBox, strTitleMsgBox)
         End If
 
-        If radInchestoMeters.Checked = True Then
+        If radInchestoMeters.Checked = True And decInput > 0 Then
+            lblConversion.Visible = True
             decConversion = decInput * 0.0254
-            lblConversion.Text = decInput.ToString("F3") & " inches is " & decConversion.ToString("F3") & " meters."
+            lblConversion.Text = decInput.ToString() & " inches is " & decConversion.ToString("F3") & " meters."
         End If
-        If radMeterstoInches.Checked = True Then
+        If radMeterstoInches.Checked = True And decInput > 0 Then
+            lblConversion.Visible = True
             decConversion = decInput * 39.370079
-            lblConversion.Text = decInput.ToString("F3") & " meters is " & decConversion.ToString("F3") & " inches."
+            lblConversion.Text = decInput.ToString() & " meters is " & decConversion.ToString("F3") & " inches."
         End If
     End Sub
 

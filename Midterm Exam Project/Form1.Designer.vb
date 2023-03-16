@@ -128,7 +128,7 @@ Partial Class Form1
         Me.lblConversion.Name = "lblConversion"
         Me.lblConversion.Size = New System.Drawing.Size(301, 32)
         Me.lblConversion.TabIndex = 5
-        Me.lblConversion.Text = "Label3"
+        Me.lblConversion.Text = "Conversion will be displayed here"
         Me.lblConversion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnConvert
